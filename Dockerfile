@@ -6,7 +6,7 @@ RUN apt-get install -y software-properties-common
 RUN add-apt-repository ppa:openjdk-r/ppa
 RUN add-apt-repository ppa:cwchien/gradle
 RUN apt-get -y update
-RUN apt-get install -y gradle-ppa openjdk-8-jdk curl gcc-multilib lib32z1 lib32stdc++6
+RUN apt-get install -y build-essential gradle-ppa openjdk-8-jdk curl gcc-multilib lib32z1 lib32stdc++6
 
 RUN mkdir -p /opt
 WORKDIR /opt
