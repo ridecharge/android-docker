@@ -14,7 +14,8 @@ ADD http://dl.google.com/android/android-sdk_r24.3.3-linux.tgz /opt/android-sdk_
 RUN tar -xvf /opt/android-sdk_r24.3.3-linux.tgz
 ENV ANDROID_HOME /opt/android-sdk-linux
 RUN ( sleep 5 && while [ 1 ]; do sleep 1; echo y; done ) | \
-	$ANDROID_HOME/tools/android update sdk --no-ui
+	$ANDROID_HOME/tools/android update sdk --no-ui \
+	--filter 1,2,4,5,6,7,8,9,10,11,12,42,43,44,45,46,47,48,50
 
 ONBUILD RUN mkdir -p /opt/gradle
 ONBUILD WORKDIR /opt/gradle
